@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: root
+  - name: test touch in server
+    shell: {{ item }}
+    with_items:
+      - "touch /tmp/teste_tower"
+      - ">> teste no arquivo criado"
